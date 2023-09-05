@@ -1,3 +1,6 @@
+
+// Consejo: para una mejor lectura alt+Z en windows
+
 // Array extraño
 const strangeArray = [
   "Zero",
@@ -28,7 +31,9 @@ const strangeArray = [
 function showList(array) {
   const container = document.getElementById("list");
   container.innerHTML = "";
+
   // Más info de forEach => https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+
   array.forEach((element) => {
     const li = document.createElement("li");
     li.appendChild(document.createTextNode(element));
@@ -36,7 +41,22 @@ function showList(array) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", (e) => {
+document.addEventListener("DOMContentLoaded", () => {
+
+  //Adjunto encontrarás una página web que recorre un array y muestra sus elementos en pantalla, el problema es que se nos han colado algunos elementos de tipos (https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/typeof) extraños, los cuales debemos filtrar(https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), para luego mostrar sólo los elementos de tipo String ordenados (https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) alfabéticamente.
+  
   // Escribe tu solución aquí
+
+  function onlyString (element) {
+    if (typeof element === "string") {
+      return true;
+    }
+  }
+
+  const newStringArray = strangeArray.filter(element => onlyString (element)).sort((a,b) => {
+    return a.localeCompare(b)
+  });
+
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
+  showList(newStringArray);
 });
