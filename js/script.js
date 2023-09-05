@@ -47,13 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Escribe tu solución aquí
 
-  function onlyString (element) {
-    if (typeof element === "string") {
-      return true;
-    }
-  }
-
-  const newStringArray = strangeArray.filter(element => onlyString (element)).sort((a,b) => {
+  const newStringArray = strangeArray.filter(element => typeof element === "string").sort((a,b) => {
     return a.localeCompare(b)
   });
 
