@@ -43,7 +43,7 @@ function showList(array) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  //Adjunto encontrarás una página web que recorre un array y muestra sus elementos en pantalla, el problema es que se nos han colado algunos elementos de tipos (https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/typeof) extraños, los cuales debemos filtrar(https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), para luego mostrar sólo los elementos de tipo String ordenados (https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) alfabéticamente.
+  //Adjunto encontrarás una página web que recorre un array y muestra sus elementos en pantalla, el problema es que se nos han colado algunos elementos de tipos (https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/typeof) extraños, los cuales debemos filtrar(https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), para luego mostrar sólo los elementos de tipo String ordenados (https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) alfabéticamente. Buscar: funciones flechas js.
   
   // Escribe tu solución aquí
 
